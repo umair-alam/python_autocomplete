@@ -103,7 +103,8 @@ def _bpe_tokenizer():
         bpe_en_de = BPEEnDe()
         bpe_en_de.load(**bpe_cache)
     else:
-        raise RuntimeError('BPE not cached')
+        pass
+        #raise RuntimeError('BPE not cached')
 
     return BPE(bpe_en_de, SourceCodeTokenizer())
 
